@@ -1,0 +1,6 @@
+.card-header{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin-top: 10px;
+}
