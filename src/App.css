@@ -1,5 +1,6 @@
-@import url("../public/css/Header_style.css");
-@import url("../public/css/footer_style.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 *{
   margin: 0;
