@@ -1,10 +1,8 @@
-
-
-function Footer(){
-  return(
+function Footer() {
+  return (
     <footer>
-      <div className="fixed px-4 bottom-3"> 
-        <div className="flex items-center gap-10">
+      <div className="fixed px-4 bottom-3 w-full flex justify-center">
+        <div className="flex gap-20"> {/* Aumenté el valor de gap a 8 para más separación */}
           <a href="">
             <img src="../public/assets/icons/icon_logo.png" alt="" />
           </a>
@@ -23,7 +21,7 @@ function Footer(){
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
 export default Footer;
