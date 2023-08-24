@@ -1,0 +1,68 @@
+/* Estilos para el contenedor principal */
+.frames-container {
+  display: flex;
+  flex-direction: column; /* Alinea los frames verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 80vh;
+}
+
+.frame {
+  width: 750px; /* Ancho deseado */
+  height: 250px; /* Alto deseado */
+  margin-bottom: 40px; /* Espacio entre los frames */
+  text-align: center; /* Centra el contenido del frame */
+  border: 1px solid #a09292; /* Agrega un contorno gris */
+  background-color: #c8bcbc; /* Agrega un relleno de color */
+   padding: 10px 20px; /* Añade espacio interno al frame */
+  position: relative; /* Posición relativa para alinear la línea */
+}
+
+/* Estilos para los textos de las publicaciones */
+.frame h2 {
+  color: #000000; /* Cambia el color del texto */
+  background-color: #c8bcbc; /* Agrega un fondo de relleno */
+  padding: 70px 10px; /* Agrega espacio interno alrededor del texto */
+  border-radius: 5px; /* Agrega bordes redondeados al fondo */
+}
+
+/* Estilos para los botones con imágenes */
+.button-with-image {
+  text-indent: -9999px; /* Oculta el texto */
+  margin: 10px; /* Ajusta el valor de margen deseado */
+  background-color: #c8bcbc;
+  padding: 10px 20px; /* Agrega espacio interno al botón */
+}
+
+.button-image1,
+.button-image2,
+.button-image3 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 200px; /* Ajusta el tamaño deseado */
+  height: 30px; /* Ajusta el tamaño deseado */
+}
+
+.button-image1 {
+  background-image: url(/assets/icons/reaccion.png);
+}
+
+.button-image2 {
+  background-image: url(/assets/icons/comentar.png);
+}
+
+.button-image3 {
+  background-image: url(/assets/icons/compartir.png);
+}
+
+/* Agrega la línea negra horizontal */
+.frame::before {
+  content: ""; /* Contenido vacío para crear la línea */
+  position: absolute; /* Posición absoluta para que la línea esté sobre los botones */
+  top: 75%; /* Coloca la línea en el centro vertical del frame */
+  left: 0; /* Coloca la línea en la parte izquierda del frame */
+  width: 100%; /* Ancho completo del frame */
+  height: 1px; /* Grosor de la línea */
+  background-color: #000000; /* Color de la línea */
+}

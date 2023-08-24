@@ -1,0 +1,8 @@
+/* Estilos para el contenedor del header */
+.Header-container {
+    position: fixed; /* Fija la posición del contenedor */
+    top: 0; /* Coloca el contenedor en la parte superior */
+    width: 100%; /* Ancho completo */
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+  }
+  
