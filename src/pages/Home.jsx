@@ -1,9 +1,10 @@
-import './Home.css';
-import React from 'react';
+
+// import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 function Home() {
+  console.log("BYEEEE")
   return (
     <>
       <Header />
