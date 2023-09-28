@@ -55,6 +55,10 @@ function Home() {
           Titulo="Gente que esté ejerciendo/estudiando la carrera de Contabilidad,
           ¿Cómo fue su experiencia? ¿recomiendan seguirla? ¿Se encuentra trabajo de eso? Gracias."
         />
+        <Publicacion
+          texto="Casi no hay videos de la universidad en youtube, no veo ni los corsos o algo así https://www.youtube.com/watch?v=llfjouGUaJA"
+          Titulo="¿No hay gente que haga más videos de la UNAS?"
+        />
       </div>
       <Footer />
     </div>
