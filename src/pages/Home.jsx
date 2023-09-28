@@ -15,14 +15,17 @@ function Home() {
         <Publicacion
           texto="La facultad que ganó el corso este año es AGRONOMÍA"
           Titulo="La facultad ganadora del corso"
+          imagenEnlace="https://images.unsplash.com/photo-1567015879523-fdef92821626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
         />
         <Publicacion
           texto="Estén atentos, ni bien termina la lluvia salimos al corso"
           Titulo="La salida al corso se pospone unos minutos en lo que la lluvia termina"
+          imagenEnlace="https://scontent.fjau4-1.fna.fbcdn.net/v/t1.18169-9/25498193_2005718326336144_6861773075668260502_n.png?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeH7LiNghVKbEndjasGxkbrV3AVrmj9Uo2LcBWuaP1SjYhWy6D-GUvJWw5jdSUulimEY6Bw4iCj0xTGMXeE0jV8O&_nc_ohc=or-SaLwAKxYAX_obLC3&_nc_ht=scontent.fjau4-1.fna&oh=00_AfAECbrHuHp8nYP0kM-0un30UGobWV-h4VOFR9ybySS3UA&oe=653D45B3"
         />
         <Publicacion
           texto="Se saldrá a las 3 PM por las respectivas puertas según cada facultad"
           Titulo="La salida al corso será a las 3 PM"
+          imagenEnlace="https://scontent.fjau4-1.fna.fbcdn.net/v/t39.30808-6/381165587_705003328339072_2873393590941491323_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=49d041&_nc_eui2=AeG96NHi9AXjcSm45kFmgsPWvLwq_gfxXQ68vCr-B_FdDlbYxZISrAElme91kBzshW78tah-y7eatWjGmFVoQxgK&_nc_ohc=AFEVJX8_0LYAX8m5THU&_nc_oc=AQmNhmZbFLEq-ybQCGBEc3MJO8WpMsxykvxRkE17iW3oYGvN0aEl9qPqWUgIndmp-LENaKYXeKHD2I9I3pp1eDYd&_nc_ht=scontent.fjau4-1.fna&oh=00_AfBdZYWQv2ouq41pS7RVRM4bdajM2O-d-tR3SykAEnySwg&oe=651B6FC6"
         />
         <Publicacion
           texto="Hace poco tuve la oportunidad e ingresé a la universidad después de mucho tiempo y
