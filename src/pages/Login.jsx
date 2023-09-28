@@ -2,8 +2,30 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate} from 'react-router-dom';
 import '/i18n.js'
+import '/api.js'
+import axios from 'axios';
 
 function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = async () => {
+    const response = await api.post('', {
+      email,
+      password,
+    });
+
+    // Si la respuesta es exitosa, navega a la página de inicio.
+    if (response.status === 200) {
+      iniciarSesion;
+      console.log('Login exitoso');
+    }
+  };
+
+  const api = axios.create({
+    baseURL: 'https://gnius-redunas.rj.r.appspot.com/api/redunas/sesion/login/'+email,
+  });
+
   const navigateTo = useNavigate();
   const [isRegistering, setIsRegistering] = useState(false);
   const { t, i18n } = useTranslation(); // Agrega i18n aquí
@@ -65,6 +87,7 @@ function Login() {
                     type="email"
                     id="email"
                     placeholder={t('email')}
+                    onChange={(e) => setEmail(e.target.value)}
                     
                   />
                 </div>
@@ -75,6 +98,7 @@ function Login() {
                     id="password"
                     placeholder="********"
                     className="w-full max-w-xs bg-stone-200 input input-bordered input-info"
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                   <a href="#" className="block text-center bg-stone-200 ">{t('lblpass')}</a>
                 </div>
@@ -86,7 +110,8 @@ function Login() {
                   type="submit"
                   value={t('initSesion')}
                   className="w-full btn btn-active btn-accent"
-                  onClick={iniciarSesion}
+                  onClick={handleSubmit}
+                  // onClick={iniciarSesion}
                 />
                 </div>           
               </>
