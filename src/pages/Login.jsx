@@ -1,9 +1,56 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
-import '/i18n.js';
+import { useNavigate} from 'react-router-dom';
+import '/i18n.js'
+import axios from 'axios';
 
 function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  //runtime start
+  const startTime = performance.now();
+
+  const handleSubmit = async () => {
+    setIsLoading(true);
+    // Validar campos
+    if (email === '' || password === '') {
+      setIsLoading(false);
+      return;
+    }
+    const response = await api.get('', {
+      params: {
+        email: email,
+        password: password,
+      },
+    });
+    setIsLoading(false);
+
+    // Login
+    if (response.status === 200) {
+      console.log('Conexion a la API exitosa');
+      const storedPassword = await response.data.pasword;
+      if (password === storedPassword) {
+        iniciarSesion();
+        console.log('Login exitoso');
+        console.log(response.data); // Imprime la respuesta de la API
+      } else {
+        console.log('La contraseña no coincide.');
+      }
+    }
+
+    //runtime end
+    const endTime = performance.now();
+    const executionTime = endTime - startTime;
+    console.log(`El tiempo de ejecución fue de ${executionTime/1000} segundos.`);
+
+  };
+
+  const api = axios.create({
+    baseURL: 'https://gnius-redunas.rj.r.appspot.com/api/redunas/sesion/login/'+email,
+  });
+
   const navigateTo = useNavigate();
   const [isRegistering, setIsRegistering] = useState(false);
   const { t, i18n } = useTranslation(); // Agrega i18n aquí
@@ -16,7 +63,9 @@ function Login() {
     i18n.changeLanguage(language); // Cambiar el idioma usando i18n
   };
 
-  const iniciarSesion = () => {
+
+  const iniciarSesion =()=>{
+    console.log("funcion iniciarSesion");
     navigateTo('/Home');
   };
 
@@ -81,6 +130,7 @@ function Login() {
                     type="email"
                     id="email"
                     placeholder={t('email')}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div className="mb-2 bg-stone-200">
@@ -92,6 +142,7 @@ function Login() {
                     id="password"
                     placeholder="********"
                     className="w-full mb-2 text-sm bg-stone-200 input input-bordered input-info"
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                   <a href="#" className="block text-right text-sm bg-stone-200">
                     <span className="text-blue-500 bg-stone-200">{t('¿Olvidaste la contraseña?')}</span>
@@ -105,10 +156,12 @@ function Login() {
                   <input
                     type="submit"
                     value={t('initSesion')}
-                    className="  w-full btn btn-active btn-accent"
-                    onClick={iniciarSesion}
+                    className="w-full btn btn-active btn-accent"
+                    disabled={isLoading}
+                    onClick={handleSubmit}
                   />
-                </div>
+                  {isLoading && <div className="spinner-border spinner-border-sm"></div>}
+                </div>           
               </>
             )}
             {isRegistering && (
