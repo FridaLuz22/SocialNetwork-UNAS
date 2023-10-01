@@ -7,14 +7,23 @@ import axios from 'axios';
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async () => {
+    setIsLoading(true);
+    // Validar campos
+    if (email === '' || password === '') {
+      setIsLoading(false);
+      return;
+    }
+    
     const response = await api.get('', {
       params: {
         email: email,
         password: password,
       },
     });
+    setIsLoading(false);
 
     // Login
     if (response.status === 200) {
@@ -114,13 +123,14 @@ function Login() {
                   <input type="checkbox"  /> {t('Recuerdame')}
                 </label>
                 <div>
-                <input
-                  type="submit"
-                  value={t('initSesion')}
-                  className="w-full btn btn-active btn-accent"
-                  onClick={handleSubmit}
-                  // onClick={iniciarSesion}
-                />
+                  <input
+                    type="submit"
+                    value={t('initSesion')}
+                    className="w-full btn btn-active btn-accent"
+                    disabled={isLoading}
+                    onClick={handleSubmit}
+                  />
+                  {isLoading && <div className="spinner-border spinner-border-sm"></div>}
                 </div>           
               </>
             )}
