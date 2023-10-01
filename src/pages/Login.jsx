@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate} from 'react-router-dom';
 import '/i18n.js'
-import '/api.js'
 import axios from 'axios';
 
 function Login() {
@@ -10,15 +9,23 @@ function Login() {
   const [password, setPassword] = useState('');
 
   const handleSubmit = async () => {
-    const response = await api.post('', {
-      email,
-      password,
+    const response = await api.get('', {
+      params: {
+        email: email,
+        password: password,
+      },
     });
 
-    // Si la respuesta es exitosa, navega a la página de inicio.
+    // Login
     if (response.status === 200) {
-      iniciarSesion;
-      console.log('Login exitoso');
+      console.log('Conexion a la API exitosa');
+      const storedPassword = await response.data.pasword;
+      if (password === storedPassword) {
+        iniciarSesion();
+        console.log('Login exitoso');
+      } else {
+        console.log('La contraseña no coincide.');
+      }
     }
   };
 
@@ -43,6 +50,7 @@ function Login() {
   };  
 
   const iniciarSesion =()=>{
+    console.log("funcion iniciarSesion");
     navigateTo('/Home');
   };
   return (
