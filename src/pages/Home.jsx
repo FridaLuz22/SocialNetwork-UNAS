@@ -9,7 +9,7 @@ function Home() {
       
       <div className="flex flex-col items-center flex-grow p-4">
       
-        <div className="p-4 mb-4 text-center border" style={{ width: '90%' }}>
+        <div className="p-14 mb-4 text-center border" style={{ width: '90%' }}>
           <h2 className="text-xl font-semibold">Publicación 1</h2>
 
                 <div className="flex flex-wrap items-center justify-center space-x-40 space-y-4 md:space-y-0">
@@ -24,7 +24,7 @@ function Home() {
             </button>
           </div>
         </div>
-        <div className="p-4 mb-4 text-center border" style={{ width: '90%' }}>
+        <div className="p-14 mb-4 text-center border" style={{ width: '90%' }}>
           <h2 className="text-xl font-semibold">Publicación 1</h2>
           <div className="flex flex-wrap items-center justify-center space-x-40 space-y-4 md:space-y-0">
             <button className="btn btn-base-100 btn-outline btn-with-image btn-image1">
@@ -38,7 +38,7 @@ function Home() {
             </button>
           </div>
         </div>
-        <div className="p-4 mb-4 text-center border" style={{ width: '90%' }}>
+        <div className="p-14 mb-4 text-center border" style={{ width: '90%' }}>
           <h2 className="text-xl font-semibold">Publicación 1</h2>
           <div className="flex flex-wrap items-center justify-center space-x-40 space-y-4 md:space-y-0">
             <button className="btn btn-base-100 btn-outline btn-with-image btn-image1">

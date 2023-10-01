@@ -1,9 +1,10 @@
-// import React from 'react';
-// import Header from '../components/Header';
-// import Footer from '../components/Footer';
+
 
 function Notification(){
+  <Header />
+      
   const Notification = [
+    
     {
       name: 'Leslie Alexander',
       email: 'leslie.alexander@example.com',
@@ -59,6 +60,7 @@ function Notification(){
   ]
 
   return (
+    
     <ul role="list" className="divide-y divide-gray-100">
       {Notification.map((person) => (
         <li key={person.email} className="flex justify-between py-5 gap-x-6">
@@ -89,6 +91,7 @@ function Notification(){
     </ul>
     
   )
+  
 }
 
 export default Notification;
