@@ -9,6 +9,9 @@ function Login() {
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
+  //runtime start
+  const startTime = performance.now();
+
   const handleSubmit = async () => {
     setIsLoading(true);
     // Validar campos
@@ -16,7 +19,6 @@ function Login() {
       setIsLoading(false);
       return;
     }
-    
     const response = await api.get('', {
       params: {
         email: email,
@@ -32,10 +34,17 @@ function Login() {
       if (password === storedPassword) {
         iniciarSesion();
         console.log('Login exitoso');
+        console.log(response.data); // Imprime la respuesta de la API
       } else {
         console.log('La contraseña no coincide.');
       }
     }
+
+    //runtime end
+    const endTime = performance.now();
+    const executionTime = endTime - startTime;
+    console.log(`El tiempo de ejecución fue de ${executionTime/1000} segundos.`);
+
   };
 
   const api = axios.create({
