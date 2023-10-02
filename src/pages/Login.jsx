@@ -181,12 +181,12 @@ function Login() {
                   
                   <div className="mb-0.1 bg-stone-200">
                     <label htmlFor="registerEmail" className="text-black text-sm bg-stone-200">
-                      {t('Correo institucional')}
+                      {t('Codigo estudiante')}
                     </label>
                     <input
                       type="email"
                       id="registerEmail"
-                      placeholder={t('email')}
+                      placeholder={t('..')}
                       className="w-full mb-2 text-sm bg-stone-200 input input-bordered input-info"
                     />
                   </div>

@@ -36,7 +36,7 @@ function Videos() {
             <iframe
               src="https://www.youtube.com/watch?v=VjYsYVm6zQ0"
               width="100%"
-              height="400"
+              height="350"
               title="Video Title"
               frameborder="0"
               allowfullscreen

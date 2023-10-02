@@ -82,9 +82,10 @@ function Profile() {
             </div>
            
           </div>
-          <Footer />
+          
         </div>
       </div>
+      <Footer />
     </>
   );
 }

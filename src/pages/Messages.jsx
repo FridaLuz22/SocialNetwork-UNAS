@@ -1,7 +1,7 @@
 import Footer from '../components/Footer';
 import { useNavigate} from 'react-router-dom';
 
-function Notification(){
+function Messages(){
 
   const navigateTo = useNavigate();
 
@@ -34,7 +34,15 @@ function Notification(){
         'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
       lastSeen: null,
     },
-    
+    {
+      name: 'Lindsay Walton',
+      email: 'lindsay.walton@example.com',
+      role: 'Front-end Developer',
+      imageUrl:
+        'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      lastSeen: '3h ago',
+      lastSeenDateTime: '2023-01-23T13:23Z',
+    },
     {
       name: 'Courtney Henry',
       email: 'courtney.henry@example.com',
@@ -51,14 +59,6 @@ function Notification(){
       imageUrl:
         'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
       lastSeen: null,
-    },
-
-    {
-      name: ' ',
-      email: '',
-      role: '',
-      lastSeen: '',
-      lastSeenDateTime: '',
     },
   ]
   
@@ -81,7 +81,7 @@ function Notification(){
                         />
                         
                     </button>
-                    <h1 className="text-xl  text-black font-extrabold animate-pulse">Notificaciones</h1>
+                    <h1 className="text-xl  text-black font-extrabold animate-pulse">Mensajes</h1>
                     </div>
                 </header>
                 </div>
@@ -134,6 +134,4 @@ function Notification(){
   )
 }
 
-export default Notification;
-
-  
+export default Messages;

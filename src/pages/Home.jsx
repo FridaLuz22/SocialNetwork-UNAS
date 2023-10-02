@@ -5,12 +5,14 @@ import Publicacion from '../components/Publicacion';
 function Home() {
   console.log("BYEEEE")
   return (
+    <>
+    <Header /> 
     <div className="flex flex-col min-h-screen">
-      <Header /> 
-      <div className="flex flex-col items-center flex-grow p-4">
+      <div className="flex flex-col items-center flex-grow p-4 bg-gray-400">
         <Publicacion
           texto="Quisiera saber cuando empieza el siguiente semestre en la Cepre Unas"
           Titulo="Saben cuando empieza la cepre?"
+          
         />
         <Publicacion
           texto="La facultad que ganó el corso este año es AGRONOMÍA"
@@ -62,6 +64,7 @@ function Home() {
       </div>
       <Footer />
     </div>
+    </>
   );
 }
 
