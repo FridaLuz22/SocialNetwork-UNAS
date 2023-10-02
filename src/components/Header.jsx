@@ -2,9 +2,12 @@ import { useNavigate} from 'react-router-dom';
 
 function Header(){
   const navigateTo = useNavigate();
-  const Notificacion=()=>{
+
+  const Notification=()=>{
     navigateTo('/Notification');
   };
+
+
   return(
     <header className="">
       <div className="flex items-center justify-between px-4 pt-6 ">
@@ -13,7 +16,7 @@ function Header(){
           <a href="">
             <img src="../assets/icons/buscador.png" alt="" />
           </a>
-          <a href="" onClick={Notificacion}>
+          <a href="" onClick={Notification}>
             <img src="../assets/icons/NOTIFICATION.png" alt="" />
           </a>
           <a href="">

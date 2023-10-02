@@ -1,7 +1,7 @@
-
+import Footer from '../components/Footer';
 
 function Notification(){
-  <Header />
+  
       
   const Notification = [
     
@@ -14,15 +14,7 @@ function Notification(){
       lastSeen: '3h ago',
       lastSeenDateTime: '2023-01-23T13:23Z',
     },
-    {
-      name: 'Michael Foster',
-      email: 'michael.foster@example.com',
-      role: 'Co-Founder / CTO',
-      imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      lastSeen: '3h ago',
-      lastSeenDateTime: '2023-01-23T13:23Z',
-    },
+    
     {
       name: 'Dries Vincent',
       email: 'dries.vincent@example.com',
@@ -59,8 +51,15 @@ function Notification(){
     },
   ]
 
-  return (
+  const containerStyle = {
+    minHeight: '100vh', //  altura de la ventana
+    backgroundColor: 'gray', // Color de fondo
     
+  };
+  
+
+  return (
+    <div style={containerStyle} className="flex justify-center items-center">
     <ul role="list" className="divide-y divide-gray-100">
       {Notification.map((person) => (
         <li key={person.email} className="flex justify-between py-5 gap-x-6">
@@ -86,9 +85,18 @@ function Notification(){
               </div>
             )} 
           </div>
+          
         </li>
+        
       ))}
+      <div className='flex justify-Center ' >
+      <Footer />
+      </div>
+      
     </ul>
+    
+    </div>
+    
     
   )
   

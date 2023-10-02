@@ -23,25 +23,29 @@ function Footer() {
     navigateTo('/Profile') 
   };
 
-  return (
+  
 
+  
+
+  return (
+    
     <footer>
       <div className="fixed flex justify-center w-full px-4 bottom-3">
         <div className="flex gap-20"> {/* Aumenté el valor de gap a 8 para más separación */}
           <a href=""  onClick={Home} >
-            <img src="../public/assets/icons/icon_logo.png" alt="" />
+            <img src="../assets/icons/icon_logo.png" alt=""  />
           </a>
           <a href="" onClick={Videos}>
-            <img src="../public/assets/icons/icon_video.png" alt="" />
+            <img src="../assets/icons/icon_video.png" alt="" />
           </a>
           <a href="" onClick={Publicar}>
-            <img src="../public/assets/icons/icon_more.png" alt="" />
+            <img src="../assets/icons/icon_more.png" alt="" />
           </a>
           <a href="" onClick={Mapa}>
-            <img src="../public/assets/icons/icon_map.png" alt="" />
+            <img src="../assets/icons/icon_map.png" alt="" />
           </a>
           <a href="" onClick={Profile}>
-            <img src="../public/assets/icons/cuenta_icon.png" alt="" />
+            <img src="../assets/icons/cuenta_icon.png" alt="" />
           </a>
         </div>
       </div>
