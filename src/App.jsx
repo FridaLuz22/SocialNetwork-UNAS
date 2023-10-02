@@ -7,6 +7,8 @@ import Videos from './pages/Videos';
 import Publicar from './pages/Publicar';
 import Map from './pages/Map';
 import Notification from './pages/Notification';
+import Messages from './pages/Messages';
+
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
 // import NotFound from './NotFound';
 
@@ -23,6 +25,7 @@ function App() {
         <Route path="/Map" element={<Map/>} />
         <Route path="/Publicar" element={<Publicar/>} />
         <Route path="/Notification" element={<Notification/>} />
+        <Route path="/Messages" element={<Messages/>} />
         <Route />
       </Routes>
     </BrowserRouter>
