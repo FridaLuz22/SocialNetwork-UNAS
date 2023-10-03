@@ -86,8 +86,8 @@ function Home() {
           Titulo="¿No hay gente que haga más videos de la UNAS?"
         />
       </div>
-      <Footer />
     </div>
+    <Footer />
     </>
   );
 }
