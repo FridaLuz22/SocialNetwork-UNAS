@@ -12,3 +12,14 @@ Luego ejecutamos:
 Una vez instaladas las dependencias, ejecuta el comando de desarrollo
 
 `npm run dev`
+
+
+
+
+usuario admin 
+correo :mary_smith@unas.edu.pe
+pasword : strongpass123
+
+usuario normal 
+correo : alex_johnson@unas.edu.pe
+pasword : password123
