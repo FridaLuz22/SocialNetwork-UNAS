@@ -13,7 +13,9 @@ Una vez instaladas las dependencias, ejecuta el comando de desarrollo
 
 `npm run dev`
 
-
+Librerias:
+AXIOS
+  `npm install axios`
 
 
 usuario admin 
