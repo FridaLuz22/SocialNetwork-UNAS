@@ -1,12 +1,36 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Publicacion from '../components/Publicacion';
+import React, { useState, useEffect } from 'react';
 
 function Home() {
-  console.log("BYEEEE")
+  const [publicaciones, setPublicaciones] = useState([]);
+
+  useEffect(() => {
+    // Realiza una petición a la API
+    fetch("https://gnius-redunas.rj.r.appspot.com/gnius/api/redunas/inicio/publicaciones-inicio")
+      .then((response) => response.json())
+      .then((data) => {
+        // Guarda los datos en el estado
+        setPublicaciones(data);
+        console.log(data[0].descripcion);
+        console.log(data);
+      });
+  }, []);
   return (
     <>
     <Header /> 
+    {<ul>
+      {
+        publicaciones.length > 0 &&
+        publicaciones.map((publicacion) => (
+          <Publicacion
+          texto={publicacion.descripcion}
+          Titulo={publicacion.nombre}
+          />
+        ))
+      }
+    </ul>}
     <div className="flex flex-col min-h-screen">
       <div className="flex flex-col items-center flex-grow p-4 bg-gray-400">
         <Publicacion
